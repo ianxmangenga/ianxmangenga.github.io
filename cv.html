@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV · Ian Mangenga</title>
+  <meta name="description" content="Curriculum vitae of Ian Mangenga: researcher, writer, strategist and founder working at the intersection of AI, policy and culture." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+  :root {
+    --cream:   #F0EBE0;
+    --black:   #0D0D0C;
+    --red:     #D93A1A;
+    --yellow:  #F0DC00;
+    --white:   #FAF9F3;
+    --muted:   #857A72;
+    --border:  rgba(13,13,12,.12);
+    --serif:   'Cormorant Garamond', Georgia, serif;
+    --display: 'Syne', system-ui, sans-serif;
+    --body:    'Inter', system-ui, sans-serif;
+    --ease:    cubic-bezier(.22,1,.36,1);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { font-family: var(--body); font-weight: 300; background: var(--cream); color: var(--black); overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-thumb { background: var(--red); }
+
+  /* Nav */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 3.5rem;
+    background: rgba(240,235,224,.85); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: var(--display); font-weight: 800; font-size: .95rem; letter-spacing: .1em; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 2.2rem; }
+  .h-md { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; transition: color .2s; }
+  .h-md:hover { color: var(--red); }
+  .btn {
+    display: inline-block; font-family: var(--display); font-weight: 700;
+    font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+    padding: .85rem 1.6rem; border: 1px solid var(--black); transition: all .25s var(--ease);
+  }
+  .btn-fill-black { background: var(--black); color: var(--white); }
+  .btn-fill-black:hover { background: var(--red); border-color: var(--red); }
+
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 3.5rem; }
+
+  /* Header */
+  .cv-hero { padding: 9.5rem 0 4rem; border-bottom: 1px solid var(--border); }
+  .cv-hero-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: end; }
+  .tag {
+    display: inline-block; font-family: var(--display); font-weight: 700;
+    font-size: .62rem; letter-spacing: .18em; text-transform: uppercase;
+    padding: .5rem .9rem; margin-bottom: 1.6rem;
+  }
+  .tag-red { background: var(--red); color: var(--white); }
+  .cv-h1 {
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(2.6rem, 6vw, 4.8rem); line-height: 1.02;
+    letter-spacing: -.01em; text-transform: uppercase;
+  }
+  .cv-h1 em { font-family: var(--serif); font-style: italic; font-weight: 300; text-transform: none; letter-spacing: 0; }
+  .cv-sub { margin-top: 1.6rem; font-size: .95rem; line-height: 1.75; color: var(--muted); max-width: 34rem; }
+  .cv-img-wrap { position: relative; }
+  .cv-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; }
+  .cv-img-frame { position: absolute; inset: 1rem -1rem -1rem 1rem; border: 1px solid var(--red); z-index: -1; }
+  .cv-img-caption { margin-top: 1rem; font-family: var(--serif); font-style: italic; font-size: .85rem; color: var(--muted); }
+
+  /* Sections */
+  .cv-section { padding: 4.5rem 0; border-bottom: 1px solid var(--border); }
+  .section-label {
+    font-family: var(--display); font-weight: 700; font-size: .62rem;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--red); margin-bottom: 2.6rem;
+  }
+  .cv-entry { display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; padding: 1.8rem 0; border-top: 1px solid var(--border); }
+  .cv-entry:first-of-type { border-top: none; padding-top: 0; }
+  .cv-when { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); padding-top: .35rem; }
+  .cv-role { font-family: var(--display); font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: .02em; }
+  .cv-org { font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--muted); margin-top: .2rem; }
+  .cv-desc { margin-top: .8rem; font-size: .88rem; line-height: 1.75; color: rgba(13,13,12,.72); max-width: 40rem; }
+
+  /* Writing list */
+  .cv-writing a { display: block; padding: 1.4rem 0; border-top: 1px solid var(--border); transition: padding-left .3s var(--ease); }
+  .cv-writing a:first-of-type { border-top: none; padding-top: 0; }
+  .cv-writing a:hover { padding-left: .8rem; }
+  .cv-writing a:hover .w-title { color: var(--red); }
+  .w-pub { font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: .35rem; }
+  .w-title { font-family: var(--serif); font-style: italic; font-size: 1.3rem; line-height: 1.3; transition: color .2s; }
+
+  /* Awards */
+  .cv-awards { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .award { background: var(--cream); padding: 1.8rem; }
+  .award-year { font-family: var(--display); font-weight: 800; font-size: .68rem; color: var(--red); letter-spacing: .14em; }
+  .award-name { font-family: var(--display); font-weight: 700; font-size: .92rem; text-transform: uppercase; margin-top: .5rem; }
+  .award-by { font-family: var(--serif); font-style: italic; font-size: .9rem; color: var(--muted); margin-top: .25rem; }
+
+  /* CTA + footer */
+  .cv-cta { padding: 5rem 0; text-align: center; }
+  .cv-cta h2 { font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem,4vw,3rem); text-transform: uppercase; margin-bottom: 2rem; }
+  footer { background: var(--black); }
+  .footer-inner { padding: 2.5rem 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-logo { font-family: var(--display); font-weight: 800; font-size: .9rem; letter-spacing: .1em; text-transform: uppercase; color: var(--white); }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.3); transition: color .2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-copy { font-size: .62rem; color: rgba(255,255,255,.18); }
+
+  @media (max-width: 1024px) {
+    nav { padding: 1rem 2rem; }
+    .nav-links { gap: 1.4rem; }
+    .wrap { padding: 0 2rem; }
+  }
+  @media (max-width: 768px) {
+    .nav-links a.h-md { display: none; }
+    .cv-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .cv-img-wrap { max-width: 320px; }
+    .cv-entry { grid-template-columns: 1fr; gap: .6rem; }
+    .cv-awards { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; text-align: center; }
+  }
+  </style>
+</head>
+<body>
+
+<nav aria-label="Main navigation">
+  <div class="nav-logo"><a href="index.html">Ian Mangenga</a></div>
+  <div class="nav-links">
+    <a href="index.html#whatido" class="h-md">Work</a>
+    <a href="index.html#opeds" class="h-md">Research</a>
+    <a href="index.html#speaking" class="h-md">Speaking</a>
+    <a href="index.html#projects" class="h-md">Projects</a>
+    <a href="index.html#about" class="h-md">About</a>
+    <a href="index.html#contact" class="btn btn-fill-black">Contact →</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════
+     CV HERO
+═══════════════════════════════ -->
+<header class="cv-hero">
+  <div class="wrap">
+    <div class="cv-hero-grid">
+      <div>
+        <span class="tag tag-red">★ Curriculum Vitae ★</span>
+        <h1 class="cv-h1">The work,<br><em>so far.</em></h1>
+        <p class="cv-sub">
+          Over ten years across civil society, research and public engagement, working on how
+          emerging technologies shape participation, institutions and public life. Currently a
+          Visiting Fellow at the London School of Economics and a Chevening Scholar completing an
+          MA in AI Ethics and Society at Birkbeck, University of London.
+        </p>
+      </div>
+      <div class="cv-img-wrap">
+        <img src="cv.jpg" alt="Portrait of Ian Mangenga" class="cv-img" />
+        <div class="cv-img-frame" aria-hidden="true"></div>
+        <div class="cv-img-caption">Ian Mangenga · London, 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════
+     EXPERIENCE
+═══════════════════════════════ -->
+<section class="cv-section" aria-label="Experience">
+  <div class="wrap">
+    <div class="section-label">01 / Experience</div>
+
+    <div class="cv-entry">
+      <div class="cv-when">Sep 2025 – Sep 2026</div>
+      <div>
+        <div class="cv-role">Visiting Fellow</div>
+        <div class="cv-org">London School of Economics, Firoz Lalji Institute for Africa</div>
+        <p class="cv-desc">Leading Artificial Cartographies, a research project mapping the material and spatial
+        infrastructure of AI across Africa: land, labour, data flows, and the governance systems built on top of them.
+        Producing research and public engagement outputs on AI governance, digital infrastructure and emerging technologies.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-when">May 2025 – May 2026</div>
+      <div>
+        <div class="cv-role">Digital Youth Engagement Consultant</div>
+        <div class="cv-org">UNICEF South Africa</div>
+        <p class="cv-desc">Leading digital participation initiatives reaching over 500,000 young people through
+        U-Report and Internet of Good Things, in partnership with the Department of Basic Education. Designing
+        data-driven campaigns and tools on online safety, mental health and girls' empowerment.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-when">Jun 2025 – Dec 2026</div>
+      <div>
+        <div class="cv-role">AI &amp; Digital Innovation Working Group Member</div>
+        <div class="cv-org">Y20 South Africa</div>
+        <p class="cv-desc">Contributing policy recommendations on artificial intelligence, digital innovation and
+        inclusive economic growth to the G20 youth engagement process.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-when">Oct 2023 – May 2025</div>
+      <div>
+        <div class="cv-role">AI Governance &amp; Ethics Consultant</div>
+        <div class="cv-org">Freelance: Property Point Ventures, Chocolate Tribe, Red Bull South Africa</div>
+        <p class="cv-desc">Advised organisations on responsible AI adoption, AI risk assessment and governance
+        readiness, translating emerging regulatory and ethical expectations into practical guidance.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-when">2018 – Present</div>
+      <div>
+        <div class="cv-role">Founder</div>
+        <div class="cv-org">Digital Girl Africa</div>
+        <p class="cv-desc">Founded a pan-African organisation advancing women's participation in the digital and AI
+        economy across nine countries, supporting more than 15,000 women and girls through research, capability
+        building and ecosystem development, in partnership with governments, multilaterals, philanthropies and
+        technology companies.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-when">Jan 2023 – Sep 2023</div>
+      <div>
+        <div class="cv-role">Digital Content Specialist</div>
+        <div class="cv-org">Desmond &amp; Leah Tutu Legacy Foundation</div>
+        <p class="cv-desc">Developed public engagement campaigns translating complex issues of democracy, human
+        rights and social justice into accessible public communications, and supported advocacy initiatives
+        strengthening civic participation across civil society audiences.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-when">Mar 2020 – Dec 2022</div>
+      <div>
+        <div class="cv-role">Creative Director</div>
+        <div class="cv-org">Digital Girl Studio</div>
+        <p class="cv-desc">Led strategic campaigns, documentaries and digital storytelling projects translating
+        public policy and social issues into accessible multimedia content for NGOs, foundations and
+        public-interest organisations.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-when">Jun 2019 – Feb 2020</div>
+      <div>
+        <div class="cv-role">Content &amp; Communications Manager</div>
+        <div class="cv-org">Parliamentary Monitoring Group</div>
+        <p class="cv-desc">Produced policy analysis and public communications improving access to parliamentary
+        proceedings, legislation and democratic processes, working closely with parliamentarians, civil society
+        and media stakeholders.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     EDUCATION
+═══════════════════════════════ -->
+<section class="cv-section" aria-label="Education">
+  <div class="wrap">
+    <div class="section-label">02 / Education</div>
+
+    <div class="cv-entry">
+      <div class="cv-when">In Progress</div>
+      <div>
+        <div class="cv-role">MA, AI Ethics &amp; Society</div>
+        <div class="cv-org">Birkbeck, University of London · Chevening Scholar</div>
+        <p class="cv-desc">Dissertation: the governance and societal implications of AI-driven credit scoring and
+        automated financial decision-making. Relevant modules: Algorithms and the Law; Managing Emerging Technologies.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-when">&nbsp;</div>
+      <div>
+        <div class="cv-role">BSc, Geography and Archaeology</div>
+        <div class="cv-org">University of the Witwatersrand</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     WRITING & MEDIA
+═══════════════════════════════ -->
+<section class="cv-section" aria-label="Writing and media">
+  <div class="wrap">
+    <div class="section-label">03 / Writing &amp; Media</div>
+    <div class="cv-writing">
+      <a href="https://www.dailymaverick.co.za/opinionista/2026-07-07-memory-is-infrastructure-the-dangerous-cost-of-dissolving-the-national-arts-council-board/" target="_blank" rel="noopener">
+        <div class="w-pub">Daily Maverick · 2026</div>
+        <div class="w-title">Memory Is Infrastructure: The Dangerous Cost of Dissolving the National Arts Council Board</div>
+      </a>
+      <a href="https://www.dailymaverick.co.za/opinionista/2025-02-12-algorithmocracy-how-hidden-codes-are-shaping-lives-and-deepening-inequalities-in-south-africa/" target="_blank" rel="noopener">
+        <div class="w-pub">Daily Maverick · 2025</div>
+        <div class="w-title">Algorithmocracy: How Hidden Codes Are Shaping Lives and Deepening Inequalities in South Africa</div>
+      </a>
+      <a href="https://mg.co.za/thought-leader/opinion/2025-02-24-metas-freedom-of-speech-gamble-rights-in-the-age-of-algorithms/" target="_blank" rel="noopener">
+        <div class="w-pub">Mail &amp; Guardian · 2025</div>
+        <div class="w-title">Meta's Freedom of Speech Gamble: Rights in the Age of Algorithms</div>
+      </a>
+      <a href="https://mg.co.za/thought-leader/opinion/2025-01-23-africas-digital-future-in-the-shadow-of-the-tiktok-saga/" target="_blank" rel="noopener">
+        <div class="w-pub">Mail &amp; Guardian · 2025</div>
+        <div class="w-title">Africa's Digital Future in the Shadow of the TikTok Saga</div>
+      </a>
+      <a href="https://youtu.be/7Gggyg3BrCU" target="_blank" rel="noopener">
+        <div class="w-pub">Short Documentary</div>
+        <div class="w-title">DALIA: How Hair Salons Became Spaces Where Women Organise, Across Race and Class</div>
+      </a>
+      <a href="https://substack.com/@accidentalgirlboss" target="_blank" rel="noopener">
+        <div class="w-pub">Newsletter &amp; Podcast</div>
+        <div class="w-title">The Accidental Girl Boss: AI, the Economy and Women's Lives</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     AWARDS
+═══════════════════════════════ -->
+<section class="cv-section" aria-label="Awards and recognition">
+  <div class="wrap">
+    <div class="section-label">04 / Awards &amp; Recognition</div>
+    <div class="cv-awards">
+      <div class="award">
+        <div class="award-year">2025</div>
+        <div class="award-name">Chevening Scholar</div>
+        <div class="award-by">UK Foreign, Commonwealth &amp; Development Office</div>
+      </div>
+      <div class="award">
+        <div class="award-year">2022</div>
+        <div class="award-name">Good Ideas Campaign</div>
+        <div class="award-by">Meta Africa</div>
+      </div>
+      <div class="award">
+        <div class="award-year">2021</div>
+        <div class="award-name">Web Champion</div>
+        <div class="award-by">Web Foundation</div>
+      </div>
+      <div class="award">
+        <div class="award-year">2021</div>
+        <div class="award-name">200 Young South Africans</div>
+        <div class="award-by">Mail &amp; Guardian</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     CTA
+═══════════════════════════════ -->
+<section class="cv-cta">
+  <div class="wrap">
+    <h2>Let's work together.</h2>
+    <a href="mailto:ianxmangenga@gmail.com" class="btn btn-fill-black">Get in touch →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Ian Mangenga</div>
+    <div class="footer-links">
+      <a href="index.html#whatido">Work</a>
+      <a href="index.html#speaking">Speaking</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="cv.html">CV</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Ian Mangenga. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
