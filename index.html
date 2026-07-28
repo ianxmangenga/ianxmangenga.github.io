@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ian Mangenga · AI Economy × Society</title>
 <meta name="description" content="Ian Mangenga researches, designs and communicates how artificial intelligence reshapes institutions, economies and public life." />
-<meta property="og:title" content="Ian Mangenga — AI Economy × Society" />
+<meta property="og:title" content="Ian Mangenga · AI Economy × Society" />
 <meta property="og:description" content="Researching, designing and communicating how artificial intelligence reshapes institutions, economies and public life." />
 <meta property="og:type" content="website" />
 <meta name="theme-color" content="#F7F2E9" />
@@ -115,10 +115,10 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center
 .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
 
 /* ═══════════════════════════════════
-   HERO — compact split, framed photo + pill CTA
+   HERO - compact split, framed photo + pill CTA
 ═══════════════════════════════════ */
 #hero { padding: 4.5rem 3.5rem 3.5rem; position: relative; }
-.hero-grid { display: grid; grid-template-columns: .82fr 1fr; gap: 3.6rem; align-items: center; position: relative; }
+.hero-grid { display: grid; grid-template-columns: 1fr .82fr; gap: 3.6rem; align-items: center; position: relative; }
 .hero-photo-frame { position: relative; border-radius: 22px; overflow: hidden; aspect-ratio: 4/5; background: var(--panel); border: 1px solid var(--line); }
 .hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(1) contrast(1.05); }
 .hero-content { position: relative; }
@@ -128,17 +128,24 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center
 .hero-btns { display: flex; gap: .9rem; flex-wrap: wrap; }
 
 /* ═══════════════════════════════════
-   TICKER — solid pink band
+   TICKER - solid pink band
 ═══════════════════════════════════ */
 .ticker-wrap { background: var(--pink); overflow: hidden; padding: 1rem 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .ticker-track { display: inline-flex; white-space: nowrap; animation: ticker 38s linear infinite; }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .ticker-track { animation-duration: 110s; } }
+.logo-marquee-wrap { overflow: hidden; }
+.logo-marquee-track { display: inline-flex; align-items: center; white-space: nowrap; animation: logomarquee 32s linear infinite; }
+.logo-marquee-track img { height: 26px; width: auto; margin: 0 2.6rem; opacity: .72; transition: opacity .3s var(--ease); flex: none; }
+.logo-marquee-track img:hover { opacity: 1; }
+@keyframes logomarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .logo-marquee-track { animation-duration: 100s; } }
+@media (max-width: 640px) { .logo-marquee-track img { height: 20px; margin: 0 1.6rem; } }
 .tk { font-family: var(--display); font-weight: 700; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); padding: 0 1rem; }
 .tk-sep { padding: 0 .7rem; color: rgba(19,17,16,.4); }
 
 /* ═══════════════════════════════════
-   PHILOSOPHY — 2-col, pull-quote + photo
+   PHILOSOPHY - 2-col, pull-quote + photo
 ═══════════════════════════════════ */
 .phi-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 4rem; align-items: center; }
 .phi-h { font-size: clamp(2rem, 3.6vw, 3rem); margin-bottom: 1.4rem; }
@@ -148,7 +155,7 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center
 .phi-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
 
 /* ═══════════════════════════════════
-   WHAT I DO — radio list
+   WHAT I DO - radio list
 ═══════════════════════════════════ */
 #whatido { background: var(--panel); }
 .offer-list { border-top: 1px solid var(--line); }
@@ -177,7 +184,7 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center
 .work-link.is-soon { color: var(--grey); font-style: italic; font-family: var(--serif); text-transform: none; letter-spacing: 0; font-size: .85rem; }
 
 /* ═══════════════════════════════════
-   RESEARCH THEMES — pill grid
+   RESEARCH THEMES - pill grid
 ═══════════════════════════════════ */
 .themes-wrap { display: flex; flex-wrap: wrap; gap: .8rem; }
 .theme-pill { display: flex; align-items: center; gap: .7rem; padding: 1rem 1.5rem; border-radius: 999px; border: 1px solid var(--line); font-family: var(--serif); font-size: 1.05rem; transition: border-color .3s var(--ease), background .3s var(--ease); }
@@ -215,6 +222,10 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center
 .pub-row { display: flex; flex-wrap: wrap; gap: 2.4rem 3.2rem; align-items: baseline; }
 .pub-name { font-family: var(--serif); font-style: italic; font-size: clamp(1.2rem, 2.2vw, 1.7rem); color: rgba(247,242,233,.85); transition: color .25s var(--ease); }
 .pub-name:hover { color: var(--pink); }
+.logo-wall { display: flex; flex-wrap: wrap; align-items: center; gap: 2.4rem 3rem; }
+.logo-wall img { height: 26px; width: auto; opacity: .68; transition: opacity .3s var(--ease), transform .3s var(--ease); }
+.logo-wall img:hover { opacity: 1; transform: translateY(-2px); }
+@media (max-width: 640px) { .logo-wall { gap: 1.6rem 1.8rem; } .logo-wall img { height: 20px; } }
 
 /* ═══════════════════════════════════
    STAT STRIP
@@ -375,69 +386,79 @@ footer { background: var(--ink); color: rgba(247,242,233,.7); }
   <div class="spark" style="top:2rem; right:8%;" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 5.6 1.4 9 3 10.6C16.6 12.2 20 13 20 13s-3.4.8-5 2.4C13.4 17 12.6 20.4 12 26c-.6-5.6-1.4-9-3-10.6C7.4 13.8 4 13 4 13s3.4-.8 5-2.4C10.6 9 11.4 5.6 12 0z"/></svg></div>
   <div class="spark" style="top:5.5rem; right:3%;" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 5.6 1.4 9 3 10.6C16.6 12.2 20 13 20 13s-3.4.8-5 2.4C13.4 17 12.6 20.4 12 26c-.6-5.6-1.4-9-3-10.6C7.4 13.8 4 13 4 13s3.4-.8 5-2.4C10.6 9 11.4 5.6 12 0z"/></svg></div>
   <div class="hero-grid">
-    <div class="hero-photo-frame rv">
-      <img src="hero-photo.jpg" alt="Portrait of Ian Mangenga" />
-    </div>
     <div class="hero-content">
-      <span class="pill pill-pink rv">✦ Now Booking — 2026</span>
+      <span class="pill pill-pink rv">✦ Interdisciplinary Thinker &amp; Do-er</span>
       <h1 class="hero-h1 rv d1"><strong>AI Economy</strong> <span class="accent-i">×</span> <strong>Society</strong></h1>
       <p class="hero-sub rv d2">Researching, designing and communicating how artificial intelligence reshapes institutions, economies and public life.</p>
       <div class="hero-btns rv d3">
-        <a href="#pillars" class="btn btn-pink">Explore My Work →</a>
-        <a href="research.html" class="btn btn-ghost">Read My Research</a>
+        <a href="design.html" class="btn btn-pink">Explore My Work →</a>
+        <a href="cv.html" class="btn btn-ghost">See My CV</a>
       </div>
     </div>
-  </div>
-</section>
-
-<div class="ticker-wrap" aria-hidden="true" role="presentation">
-  <div class="ticker-track">
-    <span class="tk">Research</span><span class="tk-sep">●</span><span class="tk">AI Governance</span><span class="tk-sep">●</span><span class="tk">Now Booking For 2026</span><span class="tk-sep">●</span><span class="tk">Strategy</span><span class="tk-sep">●</span><span class="tk">Public Engagement</span><span class="tk-sep">●</span><span class="tk">AI Economy</span><span class="tk-sep">●</span><span class="tk">Founder</span><span class="tk-sep">●</span>
-    <span class="tk">Research</span><span class="tk-sep">●</span><span class="tk">AI Governance</span><span class="tk-sep">●</span><span class="tk">Now Booking For 2026</span><span class="tk-sep">●</span><span class="tk">Strategy</span><span class="tk-sep">●</span><span class="tk">Public Engagement</span><span class="tk-sep">●</span><span class="tk">AI Economy</span><span class="tk-sep">●</span><span class="tk">Founder</span><span class="tk-sep">●</span>
-  </div>
-</div>
-
-<!-- THREE PILLARS -->
-<section id="pillars" class="pad" aria-label="What I do">
-  <div class="wrap">
-    <div class="section-label rv">The Work</div>
-    <h2 class="display-h rv" style="font-size:clamp(2rem,3.8vw,3.2rem); margin-bottom:1rem;">Three ways in.</h2>
-    <p class="rv d1" style="color:var(--ink-70); max-width:34rem; margin-bottom:2.6rem;">I don't just produce research or design products — I develop ideas, translate them into public engagement, and build the communities that shape the conversation around AI.</p>
-    <div class="pillar-list">
-      <a href="research.html" class="pillar-row rv">
-        <span class="pillar-n">01</span>
-        <span><span class="pillar-title">Research</span><span class="pillar-desc">Understanding how AI reshapes institutions, economies and public life.</span></span>
-        <span class="pillar-cta">Enter →</span>
-      </a>
-      <div class="pillar-connector" aria-hidden="true">↓</div>
-      <a href="design.html" class="pillar-row rv d1">
-        <span class="pillar-n">02</span>
-        <span><span class="pillar-title">Design</span><span class="pillar-desc">Transforming research into products, strategic communications and digital experiences.</span></span>
-        <span class="pillar-cta">Enter →</span>
-      </a>
-      <div class="pillar-connector" aria-hidden="true">↓</div>
-      <a href="communities.html" class="pillar-row rv d2">
-        <span class="pillar-n">03</span>
-        <span><span class="pillar-title">Communities</span><span class="pillar-desc">Building communities that participate in shaping the future of AI.</span></span>
-        <span class="pillar-cta">Enter →</span>
-      </a>
+    <div class="hero-photo-frame rv">
+      <img src="hero-photo.jpg" alt="Portrait of Ian Mangenga" />
     </div>
   </div>
 </section>
 
 <div class="ticker-wrap" aria-hidden="true" role="presentation">
   <div class="ticker-track">
-    <span class="tk">Writer</span><span class="tk-sep">●</span><span class="tk">Digital Culture</span><span class="tk-sep">●</span><span class="tk">LSE Fellow</span><span class="tk-sep">●</span><span class="tk">Chevening Scholar</span><span class="tk-sep">●</span><span class="tk">Africa</span><span class="tk-sep">●</span><span class="tk">AI Ethics</span><span class="tk-sep">●</span><span class="tk">Speaker</span><span class="tk-sep">●</span>
-    <span class="tk">Writer</span><span class="tk-sep">●</span><span class="tk">Digital Culture</span><span class="tk-sep">●</span><span class="tk">LSE Fellow</span><span class="tk-sep">●</span><span class="tk">Chevening Scholar</span><span class="tk-sep">●</span><span class="tk">Africa</span><span class="tk-sep">●</span><span class="tk">AI Ethics</span><span class="tk-sep">●</span><span class="tk">Speaker</span><span class="tk-sep">●</span>
+    <span class="tk">Purpose Over Popularity</span><span class="tk-sep">●</span><span class="tk">Research</span><span class="tk-sep">●</span><span class="tk">AI Governance</span><span class="tk-sep">●</span><span class="tk">Strategy</span><span class="tk-sep">●</span><span class="tk">Public Engagement</span><span class="tk-sep">●</span><span class="tk">AI Economy</span><span class="tk-sep">●</span><span class="tk">Founder</span><span class="tk-sep">●</span>
+    <span class="tk">Purpose Over Popularity</span><span class="tk-sep">●</span><span class="tk">Research</span><span class="tk-sep">●</span><span class="tk">AI Governance</span><span class="tk-sep">●</span><span class="tk">Strategy</span><span class="tk-sep">●</span><span class="tk">Public Engagement</span><span class="tk-sep">●</span><span class="tk">AI Economy</span><span class="tk-sep">●</span><span class="tk">Founder</span><span class="tk-sep">●</span>
   </div>
 </div>
 
-<!-- PUBLICATIONS -->
-<section id="publications" class="pad-sm" aria-label="Featured publications and affiliations">
+<!-- PURPOSE OVER POPULARITY -->
+<section class="pad" aria-label="Purpose over popularity">
+  <div class="wrap" style="text-align:center; max-width:42rem; margin:0 auto;">
+    <h2 class="display-h rv" style="font-size:clamp(2.1rem,4.2vw,3.3rem); margin-bottom:1.5rem;">Purpose over <span class="accent-i">Popularity.</span></h2>
+    <p class="rv d1" style="color:var(--ink-70); font-size:1.05rem; line-height:1.75;">I believe meaningful change happens through institutions. After ten years in civil society, my goal is to help build products, policies and organisations that create lasting public value at scale.</p>
+  </div>
+</section>
+
+<!-- PREVIOUS CLIENTS & PARTNERS -->
+<section id="publications" class="pad-sm" aria-label="Previous clients and partners">
   <div class="wrap">
-    <div class="section-label rv">Featured Publications</div>
-    <div class="pub-row rv">
-      <span class="pub-name">UNICEF</span><span class="pub-name">LSE</span><span class="pub-name">Digital Girl Africa</span><span class="pub-name">Chevening</span><span class="pub-name">Birkbeck</span><span class="pub-name">Mail &amp; Guardian</span><span class="pub-name">Forbes Africa</span>
+    <div class="section-label rv">Previous Clients &amp; Partners</div>
+  </div>
+  <div class="logo-marquee-wrap rv" aria-hidden="true" role="presentation">
+    <div class="logo-marquee-track">
+      <img src="logos/meta.png" alt="Meta" loading="lazy" />
+      <img src="logos/unicef.png" alt="UNICEF" loading="lazy" />
+      <img src="logos/bbc.png" alt="BBC" loading="lazy" />
+      <img src="logos/red-bull.png" alt="Red Bull" loading="lazy" />
+      <img src="logos/dove.png" alt="Dove" loading="lazy" />
+      <img src="logos/mail-guardian.png" alt="Mail &amp; Guardian" loading="lazy" />
+      <img src="logos/daily-maverick.png" alt="Daily Maverick" loading="lazy" />
+      <img src="logos/civicus.png" alt="CIVICUS" loading="lazy" />
+      <img src="logos/british-council.png" alt="British Council" loading="lazy" />
+      <img src="logos/motsepe.png" alt="Motsepe Foundation" loading="lazy" />
+      <img src="logos/grindstone.png" alt="Grindstone Accelerator" loading="lazy" />
+      <img src="logos/superbalist.png" alt="Superbalist" loading="lazy" />
+      <img src="logos/property-point.png" alt="Property Point" loading="lazy" />
+      <img src="logos/truelove.png" alt="TrueLove" loading="lazy" />
+      <img src="logos/twyg.png" alt="twyg" loading="lazy" />
+      <img src="logos/electric-south.png" alt="Electric South" loading="lazy" />
+      <img src="logos/702.png" alt="702 Talk Radio" loading="lazy" />
+      <img src="logos/power987.png" alt="Power 98.7" loading="lazy" />
+      <img src="logos/meta.png" alt="Meta" loading="lazy" />
+      <img src="logos/unicef.png" alt="UNICEF" loading="lazy" />
+      <img src="logos/bbc.png" alt="BBC" loading="lazy" />
+      <img src="logos/red-bull.png" alt="Red Bull" loading="lazy" />
+      <img src="logos/dove.png" alt="Dove" loading="lazy" />
+      <img src="logos/mail-guardian.png" alt="Mail &amp; Guardian" loading="lazy" />
+      <img src="logos/daily-maverick.png" alt="Daily Maverick" loading="lazy" />
+      <img src="logos/civicus.png" alt="CIVICUS" loading="lazy" />
+      <img src="logos/british-council.png" alt="British Council" loading="lazy" />
+      <img src="logos/motsepe.png" alt="Motsepe Foundation" loading="lazy" />
+      <img src="logos/grindstone.png" alt="Grindstone Accelerator" loading="lazy" />
+      <img src="logos/superbalist.png" alt="Superbalist" loading="lazy" />
+      <img src="logos/property-point.png" alt="Property Point" loading="lazy" />
+      <img src="logos/truelove.png" alt="TrueLove" loading="lazy" />
+      <img src="logos/twyg.png" alt="twyg" loading="lazy" />
+      <img src="logos/electric-south.png" alt="Electric South" loading="lazy" />
+      <img src="logos/702.png" alt="702 Talk Radio" loading="lazy" />
+      <img src="logos/power987.png" alt="Power 98.7" loading="lazy" />
     </div>
   </div>
 </section>
@@ -445,6 +466,7 @@ footer { background: var(--ink); color: rgba(247,242,233,.7); }
 <!-- STATS -->
 <section class="pad-sm" aria-label="At a glance">
   <div class="wrap">
+    <div class="section-label rv">My Impact</div>
     <div class="stat-strip rv">
       <div class="stat-cell"><div class="stat-n">10+</div><div class="stat-l">Years Experience</div></div>
       <div class="stat-cell"><div class="stat-n">500K+</div><div class="stat-l">People Reached</div></div>
@@ -454,11 +476,35 @@ footer { background: var(--ink); color: rgba(247,242,233,.7); }
   </div>
 </section>
 
+<!-- IN MY SPARE TIME: COMMUNITIES -->
+<section class="pad" aria-label="Communities">
+  <div class="wrap">
+    <div class="section-label rv">In My Spare Time</div>
+    <h2 class="display-h rv" style="font-size:clamp(2rem,3.8vw,3.2rem); margin-bottom:1.4rem;">Communities</h2>
+    <p class="rv d1" style="color:var(--ink-70); max-width:38rem; margin-bottom:2.6rem;">One of the causes closest to my heart is expanding women's participation in the AI economy. These initiatives are where I share ideas, build community and create opportunities for more women to learn, connect and grow together.</p>
+    <div class="comm-grid">
+      <div class="comm-card rv">
+        <span class="pill pill-pink">01</span>
+        <h3>Digital Girl Africa</h3>
+        <p>A community-led AI studio advancing women's participation in the AI economy through research, education, products and community.</p>
+        <a href="https://www.digitalgirl.africa/" class="work-link is-live" target="_blank" rel="noopener">Visit →</a>
+      </div>
+      <div class="comm-card rv d1">
+        <span class="pill pill-pink">02</span>
+        <h3>The Accidental Girl Boss</h3>
+        <p>A publication exploring AI, work, policy and the changing relationship between technology and society.</p>
+        <a href="https://substack.com/@accidentalgirlboss" class="work-link is-live" target="_blank" rel="noopener">Read →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- FINAL CTA -->
 <section id="contact" class="pad" aria-label="Contact">
   <div class="wrap" style="text-align:center;">
     <h2 class="display-h rv" style="font-size:clamp(2.2rem,4.6vw,3.6rem); margin-bottom:1.4rem;">Let's work <span class="accent-i">together.</span></h2>
-    <p class="rv d1" style="color:var(--ink-70); max-width:30rem; margin:0 auto 2rem;">Collaboration, speaking, research or partnerships — get in touch.</p>
+    <p class="rv d1" style="color:var(--ink-70); max-width:30rem; margin:0 auto 2rem;">Collaboration, speaking, research and partnerships. Get in touch.</p>
     <a href="contact.html" class="btn btn-pink rv d2">Get in Touch →</a>
   </div>
 </section>

@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Design · Ian Mangenga</title>
-<meta name="description" content="How research becomes practice — AI products, strategic communications and digital experiences designed by Ian Mangenga." />
-<meta property="og:title" content="Design — Ian Mangenga" />
-<meta property="og:description" content="Premium editorial case studies showing how research becomes practice." />
+<meta name="description" content="Ian Mangenga designs products, digital experiences and public engagement strategies that connect technology with people." />
+<meta property="og:title" content="Design - Ian Mangenga" />
+<meta property="og:description" content="Designing how people experience technology." />
 <meta property="og:type" content="website" />
 <meta name="theme-color" content="#F7F2E9" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -115,7 +115,7 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center
 .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
 
 /* ═══════════════════════════════════
-   HERO — compact split, framed photo + pill CTA
+   HERO - compact split, framed photo + pill CTA
 ═══════════════════════════════════ */
 #hero { padding: 4.5rem 3.5rem 3.5rem; position: relative; }
 .hero-grid { display: grid; grid-template-columns: .82fr 1fr; gap: 3.6rem; align-items: center; position: relative; }
@@ -128,7 +128,7 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center
 .hero-btns { display: flex; gap: .9rem; flex-wrap: wrap; }
 
 /* ═══════════════════════════════════
-   TICKER — solid pink band
+   TICKER - solid pink band
 ═══════════════════════════════════ */
 .ticker-wrap { background: var(--pink); overflow: hidden; padding: 1rem 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .ticker-track { display: inline-flex; white-space: nowrap; animation: ticker 38s linear infinite; }
@@ -138,7 +138,7 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center
 .tk-sep { padding: 0 .7rem; color: rgba(19,17,16,.4); }
 
 /* ═══════════════════════════════════
-   PHILOSOPHY — 2-col, pull-quote + photo
+   PHILOSOPHY - 2-col, pull-quote + photo
 ═══════════════════════════════════ */
 .phi-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 4rem; align-items: center; }
 .phi-h { font-size: clamp(2rem, 3.6vw, 3rem); margin-bottom: 1.4rem; }
@@ -148,7 +148,7 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center
 .phi-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
 
 /* ═══════════════════════════════════
-   WHAT I DO — radio list
+   WHAT I DO - radio list
 ═══════════════════════════════════ */
 #whatido { background: var(--panel); }
 .offer-list { border-top: 1px solid var(--line); }
@@ -177,7 +177,7 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center
 .work-link.is-soon { color: var(--grey); font-style: italic; font-family: var(--serif); text-transform: none; letter-spacing: 0; font-size: .85rem; }
 
 /* ═══════════════════════════════════
-   RESEARCH THEMES — pill grid
+   RESEARCH THEMES - pill grid
 ═══════════════════════════════════ */
 .themes-wrap { display: flex; flex-wrap: wrap; gap: .8rem; }
 .theme-pill { display: flex; align-items: center; gap: .7rem; padding: 1rem 1.5rem; border-radius: 999px; border: 1px solid var(--line); font-family: var(--serif); font-size: 1.05rem; transition: border-color .3s var(--ease), background .3s var(--ease); }
@@ -320,6 +320,35 @@ footer { background: var(--ink); color: rgba(247,242,233,.7); }
 /* Category blocks (Design) */
 .cat-block { padding: 2.6rem 0; border-top: 1px solid var(--line); }
 .cat-block:last-child { border-bottom: 1px solid var(--line); }
+
+/* Project tile grid (Products page) */
+.tile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; }
+.tile-card { display: flex; flex-direction: column; gap: .9rem; padding: 2.2rem; border-radius: 20px; background: var(--panel); border: 1px solid var(--line); transition: border-color .3s var(--ease), transform .3s var(--ease); }
+.tile-card:hover { border-color: var(--pink-deep); transform: translateY(-4px); }
+.tile-n { font-family: var(--display); font-size: .78rem; font-weight: 700; color: var(--pink-deep); }
+.tile-cat { font-family: var(--display); font-size: .6rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--grey); }
+.tile-title { font-family: var(--serif); font-style: italic; font-size: 1.5rem; margin: .2rem 0 .1rem; }
+.tile-desc { color: var(--ink-70); font-size: .92rem; line-height: 1.58; flex: 1; }
+.tile-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.tile-tags span { font-family: var(--display); font-size: .58rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: .35rem .7rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-70); }
+
+.tile-image { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 14px; }
+.tile-card details { margin-top: .2rem; border-top: 1px solid var(--line); padding-top: .9rem; }
+.tile-card summary { cursor: pointer; font-family: var(--display); font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--pink-deep); list-style: none; display: flex; align-items: center; gap: .5rem; }
+.tile-card summary::-webkit-details-marker { display: none; }
+.tile-card summary::after { content: '+ Details'; margin-left: auto; font-size: .66rem; letter-spacing: .08em; }
+.tile-card details[open] summary::after { content: '- Close'; }
+.tile-detail { padding-top: 1.1rem; display: flex; flex-direction: column; gap: 1rem; }
+.tile-detail h5 { font-family: var(--display); font-size: .58rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--grey); margin-bottom: .4rem; }
+.tile-detail p { color: var(--ink-70); font-size: .87rem; line-height: 1.6; }
+.tile-detail ol { color: var(--ink-70); font-size: .87rem; line-height: 1.6; padding-left: 1.1rem; }
+.tile-detail li { margin-bottom: .35rem; }
+.tile-detail li strong { color: var(--ink); font-weight: 500; }
+.tile-quote { font-family: var(--serif); font-style: italic; font-size: .98rem; line-height: 1.5; color: var(--ink); border-left: 2px solid var(--pink-deep); padding-left: .9rem; }
+
+@media (max-width: 1024px) {
+  .tile-grid { grid-template-columns: 1fr; }
+}
 .cat-label { font-family: var(--display); font-weight: 700; font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--pink-deep); margin-bottom: 1.2rem; }
 
 /* Community cards */
@@ -373,56 +402,208 @@ footer { background: var(--ink); color: rgba(247,242,233,.7); }
 <section class="page-hero" aria-label="Design introduction">
   <div class="wrap">
     <div class="section-label rv">Design</div>
-    <h1 class="display-h rv">Research, made <span class="accent-i">practice.</span></h1>
-    <p class="hero-sub rv d1">Every project follows the same editorial structure — challenge, research, strategy, design process, final outcome, reflection, related research — told as a story rather than a gallery of screenshots.</p>
+    <h1 class="display-h rv">Designing how people experience <span class="accent-i">technology.</span></h1>
+    <p class="hero-sub rv d1">I design products, digital experiences and public engagement strategies that help organisations connect technology with people.</p>
+    <p class="hero-sub rv d2">My work spans AI-native products, strategic communications, digital campaigns and community platforms, translating complex ideas into experiences that are useful, accessible and meaningful. Whether building a product, designing a campaign or developing a digital ecosystem, I focus on creating experiences that people can understand, trust and participate in.</p>
   </div>
 </section>
 
-<section class="pad" aria-label="Design work by category">
+<section class="pad" aria-label="Philosophy">
   <div class="wrap">
-    <div class="cat-block rv">
-      <div class="cat-label">AI Products</div>
-      <div class="work-row" style="border-top:none; padding-top:0;">
-        <span class="work-n">01</span>
-        <div class="work-title-wrap"><span class="work-cat">Ecosystem × Product</span><span class="work-title">Digital Girl Africa</span></div>
-        <p class="work-desc">A community-led AI studio building pathways for women's participation in the AI economy, across nine African countries.</p>
-        <a href="https://www.digitalgirl.africa/" class="work-link is-live" target="_blank" rel="noopener">View project →</a>
+    <div class="section-label rv">Philosophy</div>
+    <h2 class="display-h rv" style="font-size:clamp(2rem,3.6vw,3rem); margin-bottom:1.4rem;">Good design begins before <span class="accent-i">interfaces.</span></h2>
+    <p class="rv d1" style="color:var(--ink-70); max-width:40rem; line-height:1.7;">I believe good design begins long before interfaces. It starts with understanding people, institutions and the systems they navigate every day. Every project is an opportunity to bridge research, strategy and technology in ways that create lasting public value.</p>
+  </div>
+</section>
+
+
+
+<!-- AI NATIVE PRODUCTS -->
+<section class="pad" aria-label="AI native products">
+  <div class="wrap">
+    <div class="section-label rv">AI Native Products</div>
+    <h2 class="display-h rv" style="font-size:clamp(2rem,3.8vw,3.2rem); margin-bottom:.5rem;">Four working <span class="accent-i">prototypes.</span></h2>
+    <p class="rv d1" style="color:var(--ink-70); max-width:38rem; margin-bottom:2.2rem;">Each one follows the same process: a research question, a design hypothesis, and a working experience built to test it.</p>
+
+    <div class="tile-grid">
+      <div class="tile-card rv">
+        <span class="tile-n">01</span>
+        <span class="tile-cat">AI Product · Fintech</span>
+        <h3 class="tile-title">Purpose-Driven Money</h3>
+        <p class="tile-desc">A financial companion that helps people align spending with their values. Prototyped as <em>Worth</em>, it connects everyday purchases to long-term life goals rather than just tracking where money went.</p>
+        <div class="tile-tags"><span>Product Strategy</span><span>AI Strategy</span><span>Fintech</span></div>
+        <a href="https://purpose-driven-money.lovable.app" class="work-link is-live" target="_blank" rel="noopener">View Live Prototype →</a>
+        <details>
+          <summary>Case study</summary>
+          <div class="tile-detail">
+            <div><h5>The Challenge</h5><p>Most personal finance apps answer one question: where did my money go? This project asks a different one: does this decision move me closer to the life I want to build?</p></div>
+            <div><h5>Design Question</h5><p class="tile-quote">"How might AI help people make more intentional financial decisions by connecting everyday purchases to the life they want to build?"</p></div>
+            <div><h5>Approach</h5>
+              <ol>
+                <li><strong>Observe</strong>: studied how existing finance apps shape behaviour.</li>
+                <li><strong>Reframe</strong>: shifted from budgeting to intentional decision-making.</li>
+                <li><strong>Design</strong>: built an AI-native product centred on life goals and financial wellbeing.</li>
+                <li><strong>Prototype</strong>: developed a premium consumer experience with invisible AI.</li>
+              </ol>
+            </div>
+            <div><h5>AI Strategy</h5><p>AI quietly powers transaction categorisation, purchase reflection, habit recognition, narrative generation, goal forecasting and personalised recommendations. Intelligence disappears into the experience.</p></div>
+            <div><h5>Responsible Design</h5><p>Deliberately avoids shame, fear and addictive financial mechanics. Prioritises confidence, transparency, balance and long-term wellbeing.</p></div>
+            <div><h5>My Role</h5><p>Product strategy, AI strategy, UX research, service design, interaction design, information architecture, UX/UI design, visual storytelling and prototype development.</p></div>
+            <div><h5>Outcome</h5><p>Demonstrates how AI-native consumer products can create real value without centring AI itself, connecting everyday spending to the life people want to build.</p></div>
+          </div>
+        </details>
       </div>
-      <div class="work-row">
-        <span class="work-n">02</span>
-        <div class="work-title-wrap"><span class="work-cat">Concept × Civic Tech</span><span class="work-title">AI Products</span></div>
-        <p class="work-desc">Concepts exploring AI-native public services and civic technologies.</p>
-        <span class="work-link is-soon">Case study — coming soon</span>
+
+      <div class="tile-card rv d1">
+        <span class="tile-n">02</span>
+        <span class="tile-cat">AI Product · Sustainability</span>
+        <h3 class="tile-title">Slow Style Companion</h3>
+        <p class="tile-desc">Helping people build longer relationships with the clothes they already own, through outfit generation, garment care guidance and repair recommendations built in Lovable.</p>
+        <div class="tile-tags"><span>UX Research</span><span>Sustainability</span><span>Rapid Prototyping</span></div>
+        <a href="https://slow-style-companion.lovable.app" class="work-link is-live" target="_blank" rel="noopener">View Live Prototype →</a>
+        <details>
+          <summary>Case study</summary>
+          <div class="tile-detail">
+            <div><h5>The Challenge</h5><p>Modern wardrobes are full of garments people rarely wear. People forget what they own, struggle to style it, replace damaged clothing instead of repairing it, and make purchases they later regret, in one of the world's most resource-intensive industries.</p></div>
+            <div><h5>Design Question</h5><p class="tile-quote">"How might AI encourage slower, more sustainable relationships with clothing?"</p></div>
+            <div><h5>Approach</h5>
+              <ol>
+                <li><strong>Research</strong>: explored slow fashion, circular economy principles and consumer behaviour.</li>
+                <li><strong>Opportunity</strong>: most fashion technology helps people buy more; very little helps them keep what they already own.</li>
+                <li><strong>Product Strategy</strong>: positioned AI as a long-term wardrobe companion, not a shopping assistant.</li>
+                <li><strong>Prototype</strong>: built an interactive AI-native prototype in Lovable to validate the concept.</li>
+              </ol>
+            </div>
+            <div><h5>AI Strategy</h5><p>AI generates outfits from a user's existing wardrobe, surfaces forgotten pieces, and recommends repair before replacement, always framed around ownership, not consumption.</p></div>
+            <div><h5>Product Principles</h5><p>AI should encourage ownership rather than consumption, extend the life of physical products, and make personal style more sustainable over time.</p></div>
+            <div><h5>My Role</h5><p>Product strategy, UX/UI design, product research and AI experience design. Built with Lovable.</p></div>
+            <div><h5>What I Learned</h5><p class="tile-quote">"AI products do not always need to automate work. Sometimes the greatest opportunity is helping people build better relationships with the things they already have."</p></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="tile-card rv d2">
+        <span class="tile-n">03</span>
+        <span class="tile-cat">AI Product · Civic Mobility</span>
+        <h3 class="tile-title">City Companion</h3>
+        <p class="tile-desc">An AI guide for navigating cities with greater confidence. Prototyped as <em>NightGuide</em>, exploring how women move through London at night using context, not just the fastest route.</p>
+        <div class="tile-tags"><span>Service Design</span><span>Responsible AI</span><span>Civic Tech</span></div>
+        <a href="https://city-companion-night.lovable.app" class="work-link is-live" target="_blank" rel="noopener">View Live Prototype →</a>
+        <details>
+          <summary>Case study</summary>
+          <div class="tile-detail">
+            <div><h5>The Challenge</h5><p>Today's navigation systems treat mobility as a pure optimisation problem. Women's lived experience shows that night-time journeys are shaped by context as much as by distance.</p></div>
+            <div><h5>Design Question</h5><p class="tile-quote">"How might AI help women navigate cities with greater confidence by providing meaningful context rather than simply the fastest route?"</p></div>
+            <div><h5>Approach</h5>
+              <ol>
+                <li><strong>See</strong>: observed London's night-time environment through everyday journeys.</li>
+                <li><strong>Trace</strong>: researched mobility services, women's travel experiences and responsible AI principles.</li>
+                <li><strong>Map</strong>: mapped transport, lighting, activity, waiting spaces and decision points.</li>
+                <li><strong>Reframe</strong>: shifted from "how can AI make women safer?" to "how can AI help people make better-informed decisions while preserving agency?"</li>
+                <li><strong>Design</strong>: created NightGuide, an AI companion adding contextual intelligence to everyday journeys.</li>
+              </ol>
+            </div>
+            <div><h5>Key Features</h5><div class="tag-row"><span>Best Lit / Most Active Routing</span><span>Journey Confidence</span><span>Safe Pause</span></div></div>
+            <div><h5>AI Strategy</h5><p>AI deliberately stays in the background, supporting contextual recommendations, personalisation and adaptive suggestions. The interface rarely references AI directly: the best AI often feels invisible.</p></div>
+            <div><h5>Responsible AI</h5><p>Avoids predicting whether places are "safe," guaranteeing outcomes, continuous surveillance or excessive data collection. Prioritises human agency, transparency and explainability.</p></div>
+            <div><h5>My Role</h5><p>Problem framing, AI strategy, service design, UX research, journey mapping, systems thinking, product strategy, interaction design and prototype development.</p></div>
+            <div><h5>Reflection</h5><p class="tile-quote">"Good AI is defined by restraint. Rather than replacing human judgement, AI should expand it, helping people navigate complexity with greater confidence and context."</p></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="tile-card rv d3">
+        <span class="tile-n">04</span>
+        <span class="tile-cat">AI Product · Civic Tech</span>
+        <h3 class="tile-title">Civic Care Canvas</h3>
+        <p class="tile-desc">Exploring how AI can support civic participation, collective care and public decision-making. Prototyped as <em>CareMap</em>, a decision-support tool for local authorities.</p>
+        <div class="tile-tags"><span>Systems Thinking</span><span>Policy Analysis</span><span>Data Visualisation</span></div>
+        <a href="https://civic-care-canvas.lovable.app" class="work-link is-live" target="_blank" rel="noopener">View Live Prototype →</a>
+        <details>
+          <summary>Case study</summary>
+          <div class="tile-detail">
+            <div><h5>The Challenge</h5><p>Most councils optimise refuse collection using operational metrics: schedules, complaints, service performance, which rarely capture how overflowing bins affect residents' sense of safety, pride and confidence in public space.</p></div>
+            <div><h5>Design Question</h5><p class="tile-quote">"How might AI help local authorities respond to public cleanliness in ways that strengthen civic care rather than simply improve operational efficiency?"</p></div>
+            <div><h5>Approach</h5>
+              <ol>
+                <li><strong>See</strong>: observed Woolwich through photography, field notes and resident conversations.</li>
+                <li><strong>Trace</strong>: researched the history, policy and governance of waste management.</li>
+                <li><strong>Map</strong>: visualised spatial patterns, service flows and stakeholder relationships.</li>
+                <li><strong>Reframe</strong>: identified the real problem and where AI creates value.</li>
+                <li><strong>Design</strong>: prototyped a human-centred service for borough councils.</li>
+              </ol>
+            </div>
+            <div><h5>Key Features</h5><div class="tag-row"><span>Live Neighbourhood Map</span><span>Public Care Score</span><span>Explainable Recommendations</span></div></div>
+            <div><h5>AI Strategy</h5><p>AI supports prioritisation and pattern recognition across resident reports and operational data. Every recommendation stays explainable and reviewable by council staff rather than automated end to end.</p></div>
+            <div><h5>My Role</h5><p>Research, service design, AI strategy, UX strategy, information architecture, interaction design, product concept, systems mapping and prototype direction.</p></div>
+            <div><h5>Reflection</h5><p class="tile-quote">"AI should begin with people, places and public value, treated as an enabling layer within a broader service, not the centrepiece of the experience."</p></div>
+          </div>
+        </details>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="cat-block rv d1">
-      <div class="cat-label">Strategic Communications</div>
-      <div class="work-row" style="border-top:none; padding-top:0;">
-        <span class="work-n">03</span>
-        <div class="work-title-wrap"><span class="work-cat">Public Campaign</span><span class="work-title">The 1% Protocol</span></div>
-        <p class="work-desc">A public campaign exploring community participation in AI evaluation.</p>
-        <span class="work-link is-soon">Case study — coming soon</span>
+<!-- DIGITAL COMMUNICATIONS -->
+<section class="pad" aria-label="Digital communications">
+  <div class="wrap">
+    <div class="section-label rv">Digital Communications</div>
+    <h2 class="display-h rv" style="font-size:clamp(2rem,3.8vw,3.2rem); margin-bottom:.5rem;">Campaigns built through <span class="accent-i">Digital Girl Africa Studio.</span></h2>
+    <p class="rv d1" style="color:var(--ink-70); max-width:38rem; margin-bottom:2.2rem;">Social strategy, content and community work delivered for NGOs, coalitions and brands.</p>
+
+    <div class="tile-grid">
+      <div class="tile-card rv">
+        <img class="tile-image" src="campaigns/domestic-workers-rising.jpg" alt="Domestic Workers Rising campaign visual" loading="lazy" />
+        <span class="tile-n">01</span>
+        <span class="tile-cat">Campaign · Oxfam SA / SADSAWU / UDWOSA</span>
+        <h3 class="tile-title">Domestic Workers Rising</h3>
+        <p class="tile-desc">A 360 digital campaign for the Domestic Workers Rising movement, defending domestic workers' rights in South Africa. Delivered a UIF education video, a resource website with downloadable contracts, and a podcast; grew the campaign's Facebook page to 6,000 likes in two years.</p>
+        <div class="tile-tags"><span>Campaign Strategy</span><span>Video</span><span>Community Growth</span></div>
       </div>
-    </div>
 
-    <div class="cat-block rv d2">
-      <div class="cat-label">Brand Systems</div>
-      <div class="work-row" style="border-top:none; padding-top:0;">
-        <span class="work-n">04</span>
-        <div class="work-title-wrap"><span class="work-cat">Governance Framework</span><span class="work-title">Circular Legibility</span></div>
-        <p class="work-desc">An original framework for iterative, reversible and participatory algorithmic governance, applied as a system across research and product work.</p>
-        <span class="work-link is-soon">Case study — coming soon</span>
+      <div class="tile-card rv d1">
+        <img class="tile-image" src="campaigns/peoples-assembly.jpg" alt="People's Assembly campaign visual" loading="lazy" />
+        <span class="tile-n">02</span>
+        <span class="tile-cat">Campaign · Oxfam SA / SADSAWU / UDWOSA</span>
+        <h3 class="tile-title">People's Assembly</h3>
+        <p class="tile-desc">Digital campaign management supporting the People's Assembly, part of the wider Domestic Workers Rising movement defending domestic workers' rights in South Africa.</p>
+        <div class="tile-tags"><span>Campaign Strategy</span><span>Digital Organising</span></div>
       </div>
-    </div>
 
-    <div class="cat-block rv d3">
-      <div class="cat-label">Digital &amp; Web Experiences</div>
-      <div class="work-row" style="border-top:none; padding-top:0; border-bottom:1px solid var(--line);">
-        <span class="work-n">05</span>
-        <div class="work-title-wrap"><span class="work-cat">Editorial Portfolio</span><span class="work-title">This Website</span></div>
-        <p class="work-desc">The editorial portfolio you're reading now — designed as a digital publication rather than a personal site.</p>
-        <span class="work-link is-soon">More to come</span>
+      <div class="tile-card rv d2">
+        <img class="tile-image" src="campaigns/nomzamo-club.jpg" alt="The Nomzamo Club campaign visual" loading="lazy" />
+        <span class="tile-n">03</span>
+        <span class="tile-cat">Social Strategy · Youth Feminist Organisation</span>
+        <h3 class="tile-title">The Nomzamo Club</h3>
+        <p class="tile-desc">A social media identity and content strategy for a youth-feminist organisation advocating sustainable, equitable choices in fashion, beauty and wellness.</p>
+        <div class="tile-tags"><span>Social Identity</span><span>Content Strategy</span></div>
+      </div>
+
+      <div class="tile-card rv d3">
+        <img class="tile-image" src="campaigns/ciac.jpg" alt="CIAC campaign visual" loading="lazy" />
+        <span class="tile-n">04</span>
+        <span class="tile-cat">Multimedia · African Union</span>
+        <h3 class="tile-title">The CIAC</h3>
+        <p class="tile-desc">Multilingual multimedia for the Coalition for the Independence of the African Commission, including an animation explaining the Commission's mandate in English, French, Portuguese and Arabic, three partner-highlight videos, and a short documentary.</p>
+        <div class="tile-tags"><span>Animation</span><span>Documentary</span><span>Multilingual</span></div>
+      </div>
+
+      <div class="tile-card rv">
+        <img class="tile-image" src="campaigns/tiktok-afro-nation.jpg" alt="TikTok x Afro Nation campaign visual" loading="lazy" />
+        <span class="tile-n">05</span>
+        <span class="tile-cat">Experiential Content · Festival Sponsorship</span>
+        <h3 class="tile-title">TikTok × Afro Nation</h3>
+        <p class="tile-desc">An AR TikTok Effect House experience and creator content series extending Afro Nation festival sponsorship to fans who couldn't attend, including an artist's-perspective after movie.</p>
+        <div class="tile-tags"><span>AR Experience</span><span>Creator Content</span></div>
+      </div>
+
+      <div class="tile-card rv d1">
+        <img class="tile-image" src="campaigns/superbalist.jpg" alt="Superbalist campaign visual" loading="lazy" />
+        <span class="tile-n">06</span>
+        <span class="tile-cat">Brand Collaboration · Limited Edition</span>
+        <h3 class="tile-title">Superbalist</h3>
+        <p class="tile-desc">Four limited-edition t-shirt designs celebrating women's empowerment and unity, created to build community around a rising generation of digital talent.</p>
+        <div class="tile-tags"><span>Brand Collaboration</span><span>Community</span></div>
       </div>
     </div>
   </div>
